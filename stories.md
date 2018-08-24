@@ -1,8 +1,8 @@
 #User Stories
 
-##1 Header
+[Check] ##1 Header
 Given
-    I am logged in
+    I am on the page
 When
     I look at the top of the page
 Then
@@ -11,7 +11,13 @@ Then
         And Nice styling
 
 ##2 Add a product (non persistent)
-With name only
+Given
+    I am on the page
+    And have inputted "New Product 1" 
+When
+    I click the "Add" button
+Then
+    I see "New Product 1" underneath the "Products" header
 
 ##3 Add a product (persistent)
 With name only
