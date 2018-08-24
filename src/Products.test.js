@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Products from './Products';
+import AddProduct from './AddProduct';
 import { shallow } from 'enzyme';
 import {expect} from "chai";
 
@@ -15,6 +16,13 @@ describe('Products', ()=>{
         const productList = productsTag.find('.product-list');
         expect(productList).to.have.length(1);
         expect(productList).to.contain(<ul className="product-list"></ul>)
+    });
+    it('should include a add product', function () {
+        const products = ["first", "second"];
+        const productsTag = shallow(<Products products={products}/>);
+        const addProduct = productsTag.find(AddProduct);
+        expect(addProduct).to.have.length(1);
+        expect(addProduct).to.have.prop('products', products)
     });
     it('should render product list', function () {
         const products = [

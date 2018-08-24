@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AddProduct from './AddProduct';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import {expect} from "chai";
 
 describe('AddProduct', ()=>{

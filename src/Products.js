@@ -1,4 +1,5 @@
 import React from "react";
+import AddProduct from './AddProduct'
 
 export default ({products = []}) => {
 
@@ -12,6 +13,7 @@ export default ({products = []}) => {
 
     return (
       <div>
+          <AddProduct products={products}/>
           <div className="product-list-wrapper">
               <h5>Product List</h5>
               <ul className="product-list">
